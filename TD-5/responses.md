@@ -30,3 +30,48 @@ Le cluster 0 contient majoritairement des patients malades mais également des p
 Le cluster 2 présente une répartition presque équilibrée entre patients malades et non malades, ce qui montre qu’il est peu discriminant.
 
 Globalement, la classification n’est pas totalement efficace, probablement à cause des différences d’échelle entre variables.
+
+Exercice 2 : Insuffisance rénale – données normalisées
+Normalisation des données
+
+Les données ont été normalisées à l’aide de la méthode StandardScaler.
+Cette transformation permet de mettre toutes les variables sur une même échelle, avec une moyenne proche de 0 et un écart-type égal à 1.
+
+Répartition des données
+
+Après normalisation, toutes les variables ont une importance équivalente dans le calcul des distances.
+Cela évite qu’une variable ayant de grandes valeurs domine les autres.
+
+Dendrogramme
+
+Le dendrogramme obtenu après normalisation présente une structure plus équilibrée.
+Les distances sont plus homogènes, ce qui permet d’obtenir des regroupements plus fiables.
+
+Clustering (3 classes)
+
+Un nouveau clustering hiérarchique a été réalisé avec 3 clusters sur les données normalisées.
+
+Analyse des clusters
+
+D'après mes résultats obtenus je remarque :
+
+Les clusters sont beaucoup mieux séparés qu’avant normalisation.
+
+Le cluster 0 et le cluster 2 regroupent uniquement des patients atteints d’insuffisance rénale, ce qui montre une très bonne homogénéité.
+
+Le cluster 1 contient presque uniquement des patients sains, avec très peu d’erreurs.
+
+La séparation entre les patients malades et non malades est donc très nette.
+
+Interprétation
+
+La normalisation améliore fortement la qualité du clustering.
+
+Avant normalisation, certaines variables dominaient le calcul des distances, ce qui entraînait une mauvaise séparation des clusters.
+
+Après normalisation, toutes les variables contribuent de manière équitable, ce qui permet d’obtenir des clusters plus cohérents.
+
+ Conclusion
+
+La normalisation est une étape essentielle en clustering.
+Elle permet d’améliorer la qualité des regroupements en évitant les biais liés aux différences d’échelle entre les variables.
